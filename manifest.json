@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+
+  "name": "Social Share",
+  "description": "This extension allows you to share the selected text to social media",
+  "version": "1.0",
+  "options_page": "options.html",
+
+  "browser_action": {
+    "default_icon": "images/icon128.png",
+    "default_popup": "popup.html"
+  },
+
+  "icons": { 
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png" 
+  },
+
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "<all_urls>",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["thirdParty/jquery-1.11.3.min.js", "scripts/myscript.js"],
+      "css": ["styles/mystyle.css"]
+    }
+  ],
+
+  "web_accessible_resources": [
+
+    "images/icon128.png",
+    "images/twitter.png",
+    "images/facebook.png",
+    "images/linkedin.png",
+    "images/googleplus.png",
+    "images/reddit.png"
+  ]
+
+}

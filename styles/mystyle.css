@@ -1,0 +1,13 @@
+#social-share {
+	display: none;
+	position: absolute;
+	z-index: 1000000;
+	right: 0;
+	top: 50%;
+}
+
+.social-share-icon {
+	width: 20px;
+	margin-right: 3px;
+	cursor: pointer;
+}
